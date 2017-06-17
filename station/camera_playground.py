@@ -1,9 +1,7 @@
 from picamera import PiCamera
 from time import sleep
 
-
 camera = PiCamera()
-
 
 ##camera.rotation = 180
 ##camera.start_preview()
@@ -27,18 +25,19 @@ camera = PiCamera()
 #     camera.capture('/home/darren/Desktop/image%s.jpg' % i)
 # camera.stop_preview()
 camera.rotation = 180
-camera.start_preview()
-camera.annotate_text = "Test Image"
+camera.resolution = (360,360)
+#camera.start_preview()
+camera.annotate_text = "Test Image 3"
 sleep(5)
-camera.capture('/home/darren/Desktop/test_image.jpg')
-camera.stop_preview
+camera.capture('./pics/test_image.jpg')
+#camera.stop_preview
 
 
 # VIDEO
 # camera.start_preview()
 # camera.start_recording('name_of_video_file')
 # sleep(10)
-# camera.stop_recording()
+    # camera.stop_recording()
 # camera.stop_preview()
 
 
